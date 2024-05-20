@@ -1,0 +1,242 @@
+body{
+  font-family: "Roboto", sans-serif;
+}
+/* *nav-bar* */
+.navbar{
+  background-color: rgba(0, 0, 0,0.9) ;
+}
+.navbar-brand{
+  color: #fff;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 1.5px;
+}
+.navbar-nav{
+  color: #333;
+}
+.nav-link{
+  font-size: 400;
+}
+.nav-item .active::before{
+  content: '';
+  width: 90%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+}
+
+.nav-link::before{
+  display: none;
+}
+.navbar-nav{
+  color: #fff;
+}
+/* *hero* */
+.hero .containerfluid{
+  background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)), url(../imgs/hero-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.hero h1{
+  font-size: 48px;
+  letter-spacing: 2px;
+  position: relative;
+  text-align: center;
+}
+.hero h1::after{
+  content: "Developer |";
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  position: absolute;
+  bottom: -50px;
+  left: 150px;
+  animation-name: change;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  
+}
+@keyframes change{
+0%{content: "Developer |";}
+5%{content: "Develope |";}
+10%{content: "Develop |";}
+15%{content: "Develo |";}
+20%{content: "Devel |";}
+25%{content: "Deve |";}
+30%{content: "Dev |";}
+35%{content: "De |";}
+45%{content: " |";}
+50%{content: "F |";}
+55%{content: "Fr |";}
+60%{content: "Fre |";}
+65%{content: "Frel |";}
+70%{content: "Frela |";}
+75%{content: "Frelan |";}
+80%{content: "Frelanc |";}
+85%{content: "Frelance |";}
+90%{content: "Frelancer |";}
+100%{content: "Developer |";}
+}
+
+/* *about* */
+.bg-offwhite{
+  background-color: #F5F5F5;
+}
+.w-85{
+  width: 85%;
+}
+.w-90{
+  width: 90%;
+}
+/* *services* */
+.heading::after{
+  content: "";
+  width: 35px;
+  height: 5px;
+  background-color: #0D6EFD;
+  position: absolute;
+  bottom: -20px;
+   left: 50%;
+   transform: translateX(-50%);
+}
+.around{
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  border: 10px solid #0D6EFD;
+}
+.around-2{
+  width: 50px;
+  height: 50px;
+  border: 3px solid #0D6EFD;
+}
+.inner-card:hover .around,.around-2:hover{
+  background-color: #0d6efd;
+  border-color:#CDE1F8 ;
+}
+.inner-card:hover i,.around-2:hover i{
+  color: #fff;
+}
+/* *numbers* */
+.numbers{
+  background-image:linear-gradient(rgba(13, 110, 253,0.6),rgba(13, 110, 253,0.6)), url(../imgs/post-3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.numbers-around{
+  width: 80px;
+  height: 80px;
+  border: 10px solid #CDE1F8;
+}
+/* *portfolio* */
+.work-p{
+  font-size: 14px;
+}
+.work-inner img{
+  transition: 0.8s all;
+}
+.work-inner:hover img{
+  transform: scale(1.3);
+}
+
+
+/* *testimonials* */
+.testi ,.contact{
+  background-image:linear-gradient(rgba(13, 110, 253,0.6),rgba(13, 110, 253,0.6)), url(../imgs/overlay-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+.w-testi{
+  width:150px;
+  border-radius: 50%;
+}
+.carousel-indicators button{
+  height: 10px !important;
+  width: 10px !important;
+  border-radius: 50%;
+}
+.py-6{
+  padding: 80px 0;
+}
+/* *testimonials* */
+.b-bottom img{
+  width: 40px;
+  border-radius: 50%;
+}
+/* *blog* */
+.translate-middle-xy{
+  transform: translate(-50%,50%);
+}
+/* *contact* */
+.border-gray{
+  border-color: rgba(128, 128, 128, 0.493);
+}
+.contact{
+  padding-top:96px;
+  padding-bottom: 48px;
+}
+.fs-14{
+  font-size: 14px;
+}
+/* *footer* */
+.footer{
+  background-color: #0062D3;
+}
+
+/************************ *media******************/
+@media (min-width:768px){
+  /* *hero* */
+  html{
+    scroll-padding-top: 48px;
+  }
+  .hero h1{
+    font-size: 64px;
+  }
+  .hero h1::after{
+    font-size: 32px;
+    left: 280px;
+  }
+  .nav-link{
+    position: relative;
+  }
+  .nav-item .active::before{
+    content: '';
+    width: 90%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+  }
+  .nav-link::before{
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  transition: all 0.4s;
+  }
+  .nav-link:hover::before{
+    width: 90%;
+  }
+  .drop{
+    opacity: 0;
+  }
+  li.position-relative:hover .drop{
+    opacity: 1;
+  }
+  .dropdown-menu{
+    display: none;
+  }
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 2px;
+  }
+}
